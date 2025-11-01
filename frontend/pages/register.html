@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - BrainMiles</title>
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">🧠 BrainMiles</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" style="max-width: 500px; margin-top: 5rem;">
+    <div class="card">
+      <h1 class="text-center mb-3" style="font-size: 2rem;">Join BrainMiles</h1>
+      <p class="text-center mb-3" style="opacity: 0.8;">Start learning and earning today</p>
+
+      <div id="alert-container"></div>
+
+      <form id="register-form">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="username" placeholder="Choose a username" required minlength="3">
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" placeholder="Minimum 6 characters" required minlength="6">
+        </div>
+
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Re-enter password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <span id="register-text">Create Account</span>
+          <span id="register-loading" class="loading hidden"></span>
+        </button>
+      </form>
+
+      <p class="text-center mt-3">
+        Already have an account? <a href="login.html" style="color: var(--accent);">Login here</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="../public/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - BrainMiles</title>
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="dashboard.html" class="logo">🧠 BrainMiles</a>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="create-quiz.html">Create Quiz</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#" id="logout-btn" class="btn btn-secondary">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top: 2rem;">
+    <h1 style="margin-bottom: 0.5rem;">Welcome back, <span id="username">User</span>! 👋</h1>
+    <p style="opacity: 0.8; margin-bottom: 2rem;">Ready to learn and earn today?</p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value" id="total-earnings">$0.00</div>
+        <div class="stat-label">Total Earnings</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="quizzes-taken">0</div>
+        <div class="stat-label">Quizzes Taken</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="accuracy">0%</div>
+        <div class="stat-label">Accuracy Rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="streak">0</div>
+        <div class="stat-label">Day Streak 🔥</div>
+      </div>
+    </div>
+
+    <div style="margin: 3rem 0;">
+      <a href="create-quiz.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+        ✨ Create New Quiz
+      </a>
+    </div>
+
+    <h2 style="margin-bottom: 1.5rem;">Recent Quizzes</h2>
+    <div id="recent-quizzes" class="grid grid-2"></div>
+
+    <div id="no-quizzes" class="card text-center hidden">
+      <h3 style="margin-bottom: 1rem;">No quizzes yet!</h3>
+      <p style="opacity: 0.8; margin-bottom: 1.5rem;">Start your learning journey by creating your first quiz.</p>
+      <a href="create-quiz.html" class="btn btn-primary">Create Your First Quiz</a>
+    </div>
+  </div>
+
+  <script src="../public/js/dashboard.js"></script>
+</body>
+</html>

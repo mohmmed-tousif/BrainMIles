@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Quiz - BrainMiles</title>
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="dashboard.html" class="logo">🧠 BrainMiles</a>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="create-quiz.html">Create Quiz</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#" id="logout-btn" class="btn btn-secondary">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" style="max-width: 800px; margin-top: 2rem;">
+    <h1 class="mb-2">Create New Quiz</h1>
+    <p style="opacity: 0.8; margin-bottom: 2rem;">Our AI will generate personalized quiz questions from your content</p>
+
+    <div id="alert-container"></div>
+
+    <div class="card">
+      <form id="create-quiz-form">
+        <div class="form-group">
+          <label>Quiz Topic</label>
+          <input type="text" id="topic" placeholder="e.g., Machine Learning, World History, Python Programming" required>
+        </div>
+
+        <div class="form-group">
+          <label>Content to Learn</label>
+          <textarea id="content" rows="10" placeholder="Paste article, notes, or any content you want to learn from..." required></textarea>
+          <small style="opacity: 0.7;">The more detailed the content, the better the quiz questions!</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <span id="create-text">🤖 Generate Quiz with AI</span>
+          <span id="create-loading" class="loading hidden"></span>
+        </button>
+      </form>
+    </div>
+
+    <div class="card mt-3" style="background: rgba(0, 212, 255, 0.1);">
+      <h3 style="margin-bottom: 1rem;">💡 Tips for Better Quizzes</h3>
+      <ul style="list-style-position: inside; opacity: 0.9;">
+        <li>Provide detailed content (300+ words recommended)</li>
+        <li>Include key concepts, definitions, and examples</li>
+        <li>Use structured content with clear topics</li>
+        <li>Paste from articles, textbooks, or your own notes</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="../public/js/quiz.js"></script>
+</body>
+</html>

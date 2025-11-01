@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results - BrainMiles</title>
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="dashboard.html" class="logo">🧠 BrainMiles</a>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="create-quiz.html">Create Quiz</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" style="max-width: 800px; margin-top: 2rem;">
+    <div class="card text-center">
+      <div style="font-size: 4rem; margin-bottom: 1rem;" id="result-emoji">🎉</div>
+      <h1 style="margin-bottom: 1rem;">Quiz Complete!</h1>
+      
+      <div class="stats-grid" style="margin: 2rem 0;">
+        <div class="stat-card">
+          <div class="stat-value" id="score">0/0</div>
+          <div class="stat-label">Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="percentage">0%</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="earnings">$0.00</div>
+          <div class="stat-label">Earned</div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="create-quiz.html" class="btn btn-primary">Take Another Quiz</a>
+        <a href="dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+      </div>
+    </div>
+
+    <h2 style="margin: 2rem 0 1rem;">Review Answers</h2>
+    <div id="results-container"></div>
+  </div>
+
+  <script src="../public/js/quiz.js"></script>
+</body>
+</html>
